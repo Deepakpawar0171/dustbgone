@@ -15,8 +15,7 @@ export default function Navbar({ currentTab, setCurrentTab, onOpenBooking }: Nav
     { id: 'home', label: 'Home' },
     { id: 'services', label: 'Our Services' },
     { id: 'calculator', label: 'Quote Calculator' },
-    { id: 'booking-list', label: 'My Bookings' },
-    { id: 'admin', label: 'Admin Panel' }
+    { id: 'booking-list', label: 'My Bookings' }
   ];
 
   const handleNavClick = (tabId: string) => {

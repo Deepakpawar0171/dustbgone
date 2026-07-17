@@ -162,10 +162,6 @@ export default function Footer({ setCurrentTab, onOpenBooking }: FooterProps) {
             <a href="#" className="hover:text-slate-400 transition">Privacy Policy</a>
             <span>•</span>
             <a href="#" className="hover:text-slate-400 transition">Terms of Service</a>
-            <span>•</span>
-            <button onClick={() => handleNavClick('admin')} className="hover:text-slate-400 transition">
-              Staff Sign In
-            </button>
           </div>
         </div>
 
