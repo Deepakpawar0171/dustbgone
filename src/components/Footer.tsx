@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Phone, Mail, MapPin, ShieldCheck, Clock, Award } from 'lucide-react';
+import logo from '../assets/images/dustbgone_logo_1784318749298.jpg';
 
 interface FooterProps {
   setCurrentTab: (tab: string) => void;
@@ -58,7 +59,7 @@ export default function Footer({ setCurrentTab, onOpenBooking }: FooterProps) {
           <div className="space-y-4">
             <div className="flex items-center space-x-2.5">
               <img 
-                src="/src/assets/images/dustbgone_logo_1784318749298.jpg" 
+                src={logo} 
                 alt="Dust B Gone Logo" 
                 className="h-10 w-10 object-contain rounded-full shadow-md border border-slate-800"
                 referrerPolicy="no-referrer"

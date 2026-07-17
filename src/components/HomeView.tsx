@@ -3,6 +3,12 @@ import { motion } from 'motion/react';
 import { CleaningService, ServiceId } from '../types';
 import { Droplets, Waves, Wind, Layers, ArrowRight, ShieldCheck, Award, Star, Clock, HelpCircle, ChevronDown, CheckCircle2, ThumbsUp } from 'lucide-react';
 
+import heroCleanHome from '../assets/images/hero_clean_home_1784317890657.jpg';
+import waterFedWindowClean from '../assets/images/water_fed_window_clean_1784318792154.jpg';
+import gutterCleanLadder from '../assets/images/gutter_clean_ladder_1784318779997.jpg';
+import gutterVacuumDetail from '../assets/images/gutter_vacuum_detail_1784318804873.jpg';
+import pressureWashingSpinner from '../assets/images/pressure_washing_spinner_1784318818326.jpg';
+
 interface HomeViewProps {
   services: CleaningService[];
   onSelectService: (serviceId: ServiceId) => void;
@@ -67,7 +73,7 @@ export default function HomeView({
         {/* Background Image overlay with hyper-realistic clean home */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/hero_clean_home_1784317890657.jpg" 
+            src={heroCleanHome} 
             alt="Dust B Gone Pristine Property" 
             className="h-full w-full object-cover opacity-25"
             referrerPolicy="no-referrer"
@@ -323,7 +329,7 @@ export default function HomeView({
           <div className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
             <div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
               <img 
-                src="/src/assets/images/water_fed_window_clean_1784318792154.jpg" 
+                src={waterFedWindowClean} 
                 alt="Water-fed pole window cleaning" 
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
                 referrerPolicy="no-referrer"
@@ -351,7 +357,7 @@ export default function HomeView({
           <div className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
             <div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
               <img 
-                src="/src/assets/images/gutter_clean_ladder_1784318779997.jpg" 
+                src={gutterCleanLadder} 
                 alt="Technician on high ladder gutter clearing" 
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
                 referrerPolicy="no-referrer"
@@ -379,7 +385,7 @@ export default function HomeView({
           <div className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
             <div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
               <img 
-                src="/src/assets/images/gutter_vacuum_detail_1784318804873.jpg" 
+                src={gutterVacuumDetail} 
                 alt="Before and after gutter vacuuming" 
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
                 referrerPolicy="no-referrer"
@@ -407,7 +413,7 @@ export default function HomeView({
           <div className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col h-full">
             <div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
               <img 
-                src="/src/assets/images/pressure_washing_spinner_1784318818326.jpg" 
+                src={pressureWashingSpinner} 
                 alt="Rotary surface pressure washing concrete" 
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
                 referrerPolicy="no-referrer"

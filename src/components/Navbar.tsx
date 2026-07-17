@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sparkles, Menu, X, Phone, Calculator, Calendar, Shield } from 'lucide-react';
+import logo from '../assets/images/dustbgone_logo_1784318749298.jpg';
 
 interface NavbarProps {
   currentTab: string;
@@ -34,7 +35,7 @@ export default function Navbar({ currentTab, setCurrentTab, onOpenBooking }: Nav
           className="flex cursor-pointer items-center space-x-2.5 transition-transform hover:scale-[1.02]"
         >
           <img 
-            src="/src/assets/images/dustbgone_logo_1784318749298.jpg" 
+            src={logo} 
             alt="Dust B Gone Logo" 
             className="h-11 w-11 object-contain rounded-full shadow-md border border-slate-100"
             referrerPolicy="no-referrer"

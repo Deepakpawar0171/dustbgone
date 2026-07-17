@@ -1,4 +1,8 @@
 import { CleaningService } from './types';
+import waterFedWindowClean from './assets/images/water_fed_window_clean_1784318792154.jpg';
+import pressureWashingSpinner from './assets/images/pressure_washing_spinner_1784318818326.jpg';
+import dryerVentCleaning from './assets/images/dryer_vent_cleaning_1784317922229.jpg';
+import gutterVacuumDetail from './assets/images/gutter_vacuum_detail_1784318804873.jpg';
 
 export const SERVICES_DATA: CleaningService[] = [
   {
@@ -6,7 +10,7 @@ export const SERVICES_DATA: CleaningService[] = [
     title: 'Spotless Window Washing',
     shortDesc: 'Using water-fed telescopic pole pure water systems & interior hand details.',
     description: 'Our advanced pure water window cleaning service features state-of-the-art telescopic water-fed poles. By filtering water to 0 parts per million (PPM) of dissolved solids, we clean windows safely from the ground up to 4 stories. The water acts as a natural solvent to dissolve dirt, drying to a crystal-clear, streak-free finish with no chemical residues or squeegee lines.',
-    image: '/src/assets/images/water_fed_window_clean_1784318792154.jpg',
+    image: waterFedWindowClean,
     icon: 'Tv', // fallback representation or custom
     highlights: [
       'Pure-water filtration (0 PPM) for chemical-free, spotless dry',
@@ -33,7 +37,7 @@ export const SERVICES_DATA: CleaningService[] = [
     title: 'High-Performance Pressure Washing',
     shortDesc: 'Deep blasting concrete walkways, roof structures, parkades, and facades.',
     description: 'Revitalize your building exterior, walking paths, and vehicle zones with professional commercial-grade pressure washing and soft-washing. We remove decades of built-up oil, grease, tire marks, mold, moss, and atmospheric smog. Our dual-method system uses hot high-pressure water for durable surfaces and delicate soft-washing for shingles, wood, and stucco.',
-    image: '/src/assets/images/pressure_washing_spinner_1784318818326.jpg',
+    image: pressureWashingSpinner,
     icon: 'Waves',
     highlights: [
       'Commercial concrete surface spinners for fast, streak-free path restoration',
@@ -60,7 +64,7 @@ export const SERVICES_DATA: CleaningService[] = [
     title: 'Interior & Exterior Dryer Vent Cleaning',
     shortDesc: 'Complete lint removal and airway optimization for home safety and energy efficiency.',
     description: 'Dryer vents are one of the top causes of residential building fires due to highly combustible lint build-up. Our specialized dryer vent care accesses the full duct system from both the interior appliance connection and the exterior roof or wall exhaust port. We pull out solid lint packings, inspect vents for blocks, and improve dryer drying times by up to 50%.',
-    image: '/src/assets/images/dryer_vent_cleaning_1784317922229.jpg',
+    image: dryerVentCleaning,
     icon: 'Wind',
     highlights: [
       'Dual-brush rotating systems clean entire runs of up to 40 feet of pipe',
@@ -87,7 +91,7 @@ export const SERVICES_DATA: CleaningService[] = [
     title: 'Gutter Vacuuming & Hand Clearing',
     shortDesc: 'Heavy-duty suction vacuuming and hand clearing for flawless water flow.',
     description: 'Clogged gutters lead to water overflow, wood rot, roof leaks, and compromised concrete foundations. We clear and clean gutters thoroughly using industrial gutter vacuums from the safety of the ground, paired with expert hand-clearing and downspout washing where required. Ensure rain flows perfectly away from your building walls.',
-    image: '/src/assets/images/gutter_vacuum_detail_1784318804873.jpg',
+    image: gutterVacuumDetail,
     icon: 'Grid',
     highlights: [
       'High-power gutter vacuum sucks up sludge, water, mud, and pine needles easily',
