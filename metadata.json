@@ -1,0 +1,6 @@
+{
+  "name": "Dust B Gone Cleaning Services",
+  "description": "Professional commercial and residential exterior cleaning services, window washing, pressure washing, gutter clearing, and dryer vent cleaning with online booking and dynamic pricing estimator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
