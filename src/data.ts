@@ -1,8 +1,8 @@
 import { CleaningService } from './types';
-import waterFedWindowClean from './assets/images/water_fed_window_clean_1784318792154.jpg';
-import pressureWashingSpinner from './assets/images/pressure_washing_spinner_1784318818326.jpg';
-import dryerVentCleaning from './assets/images/dryer_vent_cleaning_1784317922229.jpg';
-import gutterVacuumDetail from './assets/images/gutter_vacuum_detail_1784318804873.jpg';
+import waterFedWindowClean from './assets/images/window_1_logo_pole_v2_1784338520163.jpg';
+import pressureWashingSpinner from './assets/images/pressure_1_spinner_v2_1784338580673.jpg';
+import dryerVentCleaning from './assets/images/dryer_1_laundry_1784337496359.jpg';
+import gutterVacuumDetail from './assets/images/gutter_1_vacuum_1784337539840.jpg';
 
 export const SERVICES_DATA: CleaningService[] = [
   {
