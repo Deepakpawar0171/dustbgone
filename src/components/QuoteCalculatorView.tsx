@@ -62,6 +62,8 @@ export default function QuoteCalculatorView({
       case 'pressure': return <Waves className={`${className} text-blue-500`} />;
       case 'dryer': return <Wind className={`${className} text-indigo-500`} />;
       case 'gutter': return <Layers className={`${className} text-emerald-500`} />;
+      case 'house-wash': return <Home className={`${className} text-amber-500`} />;
+      case 'commercial': return <Building className={`${className} text-purple-500`} />;
     }
   };
 
@@ -314,6 +316,62 @@ export default function QuoteCalculatorView({
                   <div className="flex justify-between text-[10px] text-slate-400 font-semibold">
                     <span>20 Feet</span>
                     <span>600 Linear Feet</span>
+                  </div>
+                </div>
+              )}
+
+              {/* House Washing Siding Slider */}
+              {quoteInput.selectedServices.includes('house-wash') && (
+                <div className="space-y-3 pt-4">
+                  <div className="flex justify-between items-end">
+                    <div className="flex items-center space-x-2">
+                      {renderServiceIcon('house-wash', 'h-4 w-4')}
+                      <label className="text-xs font-bold text-slate-700">House Washing Surface Area</label>
+                    </div>
+                    <span className="text-sm font-black text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-md">
+                      {(quoteInput.houseWashSqFt || 1500).toLocaleString()} Sq Ft
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    min="500"
+                    max="6000"
+                    step="100"
+                    value={quoteInput.houseWashSqFt || 1500}
+                    onChange={(e) => handleSliderChange('houseWashSqFt', Number(e.target.value))}
+                    className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  />
+                  <div className="flex justify-between text-[10px] text-slate-400 font-semibold">
+                    <span>500 Sq Ft</span>
+                    <span>6,000 Sq Ft</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Commercial Site Size Slider */}
+              {quoteInput.selectedServices.includes('commercial') && (
+                <div className="space-y-3 pt-4">
+                  <div className="flex justify-between items-end">
+                    <div className="flex items-center space-x-2">
+                      {renderServiceIcon('commercial', 'h-4 w-4')}
+                      <label className="text-xs font-bold text-slate-700">Commercial Site Surface Area</label>
+                    </div>
+                    <span className="text-sm font-black text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-md">
+                      {(quoteInput.commercialAreaSqFt || 2000).toLocaleString()} Sq Ft
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    min="1000"
+                    max="20000"
+                    step="500"
+                    value={quoteInput.commercialAreaSqFt || 2000}
+                    onChange={(e) => handleSliderChange('commercialAreaSqFt', Number(e.target.value))}
+                    className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  />
+                  <div className="flex justify-between text-[10px] text-slate-400 font-semibold">
+                    <span>1,000 Sq Ft</span>
+                    <span>20,000 Sq Ft (Large Facility)</span>
                   </div>
                 </div>
               )}

@@ -1,6 +1,6 @@
 {
   "name": "Dust B Gone Cleaning Services",
-  "description": "Professional commercial and residential exterior cleaning services, window washing, pressure washing, gutter clearing, and dryer vent cleaning with online booking and dynamic pricing estimator.",
+  "description": "Premium commercial & residential exterior cleaning in Eastern Ontario (Kingston, Belleville, Brockville). Telescopic window cleaning, pressure washing, gutter vacuuming, and dryer vent cleaning.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

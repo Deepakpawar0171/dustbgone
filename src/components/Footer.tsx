@@ -89,13 +89,23 @@ export default function Footer({ setCurrentTab, onOpenBooking }: FooterProps) {
                 </button>
               </li>
               <li>
+                <button onClick={() => handleNavClick('gutter')} className="hover:text-blue-400 transition text-left">
+                  Gutter Vacuum Extraction
+                </button>
+              </li>
+              <li>
                 <button onClick={() => handleNavClick('dryer')} className="hover:text-blue-400 transition text-left">
                   Dryer Vent Cleansing
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('gutter')} className="hover:text-blue-400 transition text-left">
-                  Gutter Vacuum Extraction
+                <button onClick={() => handleNavClick('house-wash')} className="hover:text-blue-400 transition text-left">
+                  House Siding Soft-Wash
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick('commercial')} className="hover:text-blue-400 transition text-left">
+                  Commercial Exterior Clean
                 </button>
               </li>
             </ul>
@@ -106,22 +116,32 @@ export default function Footer({ setCurrentTab, onOpenBooking }: FooterProps) {
             <h3 className="text-sm font-semibold tracking-wider text-slate-100 uppercase mb-4">Quick Navigation</h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <button onClick={() => handleNavClick('home')} className="hover:text-blue-400 transition">
+                <button onClick={() => handleNavClick('home')} className="hover:text-blue-400 text-left transition">
                   Home Overview
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('calculator')} className="hover:text-blue-400 transition">
+                <button onClick={() => handleNavClick('credentials')} className="hover:text-blue-400 text-left transition">
+                  Credentials & Safety
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick('areas')} className="hover:text-blue-400 text-left transition">
+                  Local Response Zones
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick('reviews')} className="hover:text-blue-400 text-left transition">
+                  Client Reviews & Feedback
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick('calculator')} className="hover:text-blue-400 text-left transition">
                   Interactive Quote Estimator
                 </button>
               </li>
               <li>
-                <button onClick={onOpenBooking} className="hover:text-blue-400 transition">
-                  Online Scheduling Center
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('booking-list')} className="hover:text-blue-400 transition">
+                <button onClick={() => handleNavClick('booking-list')} className="hover:text-blue-400 text-left transition">
                   My Active Appts
                 </button>
               </li>

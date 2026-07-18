@@ -6,6 +6,9 @@ import ServiceDetailView from './components/ServiceDetailView';
 import QuoteCalculatorView from './components/QuoteCalculatorView';
 import BookingSystemView from './components/BookingSystemView';
 import BookingListView from './components/BookingListView';
+import CredentialsView from './components/CredentialsView';
+import AreasView from './components/AreasView';
+import ReviewsView from './components/ReviewsView';
 
 import { SERVICES_DATA } from './data';
 import { getInitialQuoteDetails, calculateQuote } from './utils';
@@ -29,6 +32,118 @@ export default function App() {
   // Modal states for successful booking confirmation overlay
   const [lastSubmittedBooking, setLastSubmittedBooking] = useState<Booking | null>(null);
   const [successModalTab, setSuccessModalTab] = useState<'details' | 'customer-email' | 'owner-email' | 'logs'>('details');
+
+  // Dynamic Structured Data Schema Markup (JSON-LD) for Local SEO & Rich Snippets
+  React.useEffect(() => {
+    // Remove existing schema if any
+    const existing = document.getElementById('jsonld-schema');
+    if (existing) {
+      existing.remove();
+    }
+
+    let schemaData: any = null;
+
+    if (['home', 'credentials', 'areas', 'reviews'].includes(currentTab)) {
+      // LocalBusiness Schema with AreaServed details
+      schemaData = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Dust B Gone Cleaning Services",
+        "description": "Premium commercial & residential exterior property maintenance in Eastern Ontario. Specialties include pure-water window cleaning, pressure washing, gutter vacuuming, and dryer vent duct clearing.",
+        "url": window.location.origin,
+        "telephone": "+16042063969",
+        "priceRange": "$$",
+        "image": "https://ais-pre-3ny3p6t3aczdzdblricpch-600404766887.us-east1.run.app/assets/images/dustbgone_logo_1784318749298.jpg",
+        "logo": "https://ais-pre-3ny3p6t3aczdzdblricpch-600404766887.us-east1.run.app/assets/images/dustbgone_logo_1784318749298.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bayridge & Sydenham Districts",
+          "addressLocality": "Kingston",
+          "addressRegion": "ON",
+          "postalCode": "K7L",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "44.2312",
+          "longitude": "-76.4860"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Kingston, ON" },
+          { "@type": "AdministrativeArea", "name": "Belleville, ON" },
+          { "@type": "AdministrativeArea", "name": "Brockville, ON" },
+          { "@type": "AdministrativeArea", "name": "Napanee, ON" },
+          { "@type": "AdministrativeArea", "name": "Amherstview, ON" },
+          { "@type": "AdministrativeArea", "name": "Gananoque, ON" },
+          { "@type": "AdministrativeArea", "name": "Prince Edward County, ON" }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "218"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "07:00",
+            "closes": "19:00"
+          }
+        ]
+      };
+    } else if (['window', 'pressure', 'dryer', 'gutter', 'house-wash', 'commercial'].includes(currentTab)) {
+      // Individual Service Schema
+      const svcNames: Record<string, string> = {
+        window: 'Telescopic Carbon-Pole Window Cleaning',
+        pressure: 'Rotary Surface Pressure Washing',
+        dryer: 'Interior/Exterior Dryer Vent Duct Cleaning',
+        gutter: 'High-Lift Gutter Vacuum Extraction',
+        'house-wash': 'Low-Pressure Soft-Wash House Siding Cleaning',
+        commercial: 'Commercial Exterior Property Maintenance'
+      };
+      
+      const svcDescs: Record<string, string> = {
+        window: 'State-of-the-art carbon fiber telescopic poles pumping 100% deionized water (0 PPM) through premium bristles. Spotless dry guarantee up to 4 stories.',
+        pressure: 'High-power 3500 PSI rotary concrete spinning surface cleaner combined with biodegradable natural soaps to restore driveway and brick curb appeal.',
+        dryer: 'Complete mechanical extraction of combustible lint blocks to decrease dryer wear, improve cycle speeds, and prevent residential fire hazards.',
+        gutter: 'Heavy high-lift vacuum tubes extraction of pine needles, leaves, and sludge. Full downspout tests and eavestrough inspections.',
+        'house-wash': 'Proprietary biodegradable low-pressure soft-wash detergent application that safely kills algae, mold, and green spores on siding down to the root.',
+        commercial: 'Fully safety-certified commercial facade washes, hot water steam cleaning of sidewalks, parking curbs, and store-front window washing.'
+      };
+
+      schemaData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": svcNames[currentTab] || "Exterior Cleaning Service",
+        "description": svcDescs[currentTab] || "Professional exterior property maintenance services in Eastern Ontario.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Dust B Gone Cleaning Services",
+          "telephone": "+16042063969",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kingston",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+          }
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Kingston, ON" },
+          { "@type": "AdministrativeArea", "name": "Belleville, ON" },
+          { "@type": "AdministrativeArea", "name": "Brockville, ON" },
+          { "@type": "AdministrativeArea", "name": "Napanee, ON" }
+        ]
+      };
+    }
+
+    if (schemaData) {
+      const script = document.createElement('script');
+      script.id = 'jsonld-schema';
+      script.type = 'application/ld+json';
+      script.innerHTML = JSON.stringify(schemaData);
+      document.head.appendChild(script);
+    }
+  }, [currentTab]);
 
   const handleBookingSuccess = (newBooking: Booking) => {
     setLastSubmittedBooking(newBooking);
@@ -147,11 +262,22 @@ export default function App() {
           />
         );
 
+      case 'credentials':
+        return <CredentialsView />;
+
+      case 'areas':
+        return <AreasView />;
+
+      case 'reviews':
+        return <ReviewsView />;
+
       // Dedicated Webpage representation for each service
       case 'window':
       case 'pressure':
       case 'dryer':
-      case 'gutter': {
+      case 'gutter':
+      case 'house-wash':
+      case 'commercial': {
         const activeService = SERVICES_DATA.find(s => s.id === currentTab);
         if (!activeService) return <div className="p-12 text-center text-slate-500">Service Not Found</div>;
         return (

@@ -8,6 +8,8 @@ export const getInitialQuoteDetails = (): QuoteDetails => ({
   pressureAreaSqFt: 800,
   dryerVentCount: 1,
   gutterLengthFt: 100,
+  houseWashSqFt: 1500,
+  commercialAreaSqFt: 2000,
   ecoFriendlySoap: false,
   debrisDisposal: false,
   screenCleaning: false,
@@ -23,6 +25,8 @@ export function calculateQuote(input: QuoteDetails): QuoteResult {
     pressureAreaSqFt,
     dryerVentCount,
     gutterLengthFt,
+    houseWashSqFt,
+    commercialAreaSqFt,
     ecoFriendlySoap,
     debrisDisposal,
     screenCleaning,
@@ -116,6 +120,50 @@ export function calculateQuote(input: QuoteDetails): QuoteResult {
       name: 'Roof Gutter Vacuum & Hand Clearing',
       qty: gutterLengthFt,
       unit: 'linear ft',
+      cost: Math.round(cost * 100) / 100
+    });
+    subtotal += cost;
+  }
+
+  // 5. House Washing (Siding Soft-Wash)
+  if (selectedServices.includes('house-wash')) {
+    const sqFt = houseWashSqFt || 1500;
+    let cost = 250; // covers up to 1500 sq ft
+    const extraQty = Math.max(0, sqFt - 1500);
+    cost += extraQty * 0.15;
+
+    if (stories >= 2) {
+      cost *= 1.10; // 10% elevation surcharge
+    }
+    cost *= propertyMultiplier;
+
+    breakdown.push({
+      serviceId: 'house-wash',
+      name: 'House Soft-Wash & Siding Restoration',
+      qty: sqFt,
+      unit: 'sq ft',
+      cost: Math.round(cost * 100) / 100
+    });
+    subtotal += cost;
+  }
+
+  // 6. Commercial Exterior Cleaning
+  if (selectedServices.includes('commercial')) {
+    const sqFt = commercialAreaSqFt || 2000;
+    let cost = 350; // covers up to 2000 sq ft
+    const extraQty = Math.max(0, sqFt - 2000);
+    cost += extraQty * 0.20;
+
+    if (stories >= 3) {
+      cost *= 1.15; // 15% safety / high access charge
+    }
+    cost *= propertyMultiplier;
+
+    breakdown.push({
+      serviceId: 'commercial',
+      name: 'Commercial Facade & Property Maintenance',
+      qty: sqFt,
+      unit: 'sq ft',
       cost: Math.round(cost * 100) / 100
     });
     subtotal += cost;

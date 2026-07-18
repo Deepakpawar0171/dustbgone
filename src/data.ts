@@ -3,67 +3,96 @@ import waterFedWindowClean from './assets/images/window_1_logo_pole_v2_178433852
 import pressureWashingSpinner from './assets/images/pressure_1_spinner_v2_1784338580673.jpg';
 import dryerVentCleaning from './assets/images/dryer_1_laundry_1784337496359.jpg';
 import gutterVacuumDetail from './assets/images/gutter_1_vacuum_1784337539840.jpg';
+import houseWashingFacade from './assets/images/pressure_2_facade_1784337461310.jpg';
+import commercialHotWash from './assets/images/pressure_4_curb_1784337482207.jpg';
 
 export const SERVICES_DATA: CleaningService[] = [
   {
     id: 'window',
-    title: 'Spotless Window Washing',
-    shortDesc: 'Using water-fed telescopic pole pure water systems & interior hand details.',
-    description: 'Our advanced pure water window cleaning service features state-of-the-art telescopic water-fed poles. By filtering water to 0 parts per million (PPM) of dissolved solids, we clean windows safely from the ground up to 4 stories. The water acts as a natural solvent to dissolve dirt, drying to a crystal-clear, streak-free finish with no chemical residues or squeegee lines.',
+    title: 'Window Cleaning Kingston',
+    shortDesc: 'Pure-water telescopic pole window cleaning up to 4 stories & premium interior hand-detailing.',
+    description: 'Our professional window cleaning in Kingston, Ontario is designed to give you a pristine, streak-free view. We specialize in state-of-the-art carbon fiber telescopic water-fed poles paired with high-volume pure deionized water filtration (0 PPM). This advanced exterior window washing technique is completely chemical-free, safe for nearby plants, and leaves a static-repellent finish that stays clean twice as long as traditional squeegees. We serve residential and commercial properties throughout Kingston, Amherstview, Bath, Loyalist, Bayridge, Belleville, and Napanee.',
     image: waterFedWindowClean,
-    icon: 'Tv', // fallback representation or custom
+    icon: 'Tv',
     highlights: [
-      'Pure-water filtration (0 PPM) for chemical-free, spotless dry',
+      'Pure-water filtration (0 PPM) ensures 100% spotless, streak-free air dry',
       'High-reach telescopic poles clean up to 4 stories safely from the ground',
-      'Cleans frame, sills, and tracks in addition to the glass pane',
-      'Both exterior telescopic and interior hand-crafted cleaning available'
+      'Full-frame, sill, and window track agitation & detailing included',
+      'Both exterior water-fed poles and interior hand-crafted cleaning available'
     ],
     features: [
-      { title: 'Telescopic Pole System', desc: 'Allows safe, fast, and pristine exterior washing without dangerous ladders.' },
-      { title: 'Pure Water Technology', desc: 'Deionized water leaves an ultra-clean static-repelling finish that stays clean longer.' },
-      { title: 'Frame & Sill Detailing', desc: 'We do not just clean glass—we wipe down frames and clear tracks of grit and spiders.' }
+      { title: 'Telescopic Pole System', desc: 'Allows safe, fast, and pristine exterior washing without dangerous ladder-leaning.' },
+      { title: 'Pure Water Technology', desc: 'Deionized water acts as a natural soil magnet, leaving an ultra-clean static-repelling finish.' },
+      { title: 'Frame & Sill Detailing', desc: 'We do not just clean the glass panes—we wipe down outer frames and clear tracks of grit and spiders.' }
     ],
     process: [
-      { step: 1, title: 'Inspection & Prep', desc: 'Inspect window seals, screen removal, and identify fragile glass surfaces.' },
-      { step: 2, title: 'Agitation & Pure Wash', desc: 'Scrub glass with soft-bristled boar-hair pole brushes while pure water flows directly through.' },
-      { step: 3, title: 'Spotless Rinse', desc: 'Flush glass from top to bottom with purified water to carry away all suspended minerals.' },
-      { step: 4, title: 'Interior Finishing', desc: 'If selected, hand-wash screens and wipe interior windows with lint-free microfiber.' }
+      { step: 1, title: 'Inspection & Prep', desc: 'We inspect window seals, remove exterior screens, and identify fragile glass surfaces.' },
+      { step: 2, title: 'Agitation & Pure Wash', desc: 'Our technicians scrub glass with soft-bristled boar-hair pole brushes while pure water flows directly through.' },
+      { step: 3, title: 'Spotless Rinse', desc: 'We flush the glass from top to bottom with purified water to carry away all suspended minerals.' },
+      { step: 4, title: 'Interior Finishing', desc: 'If interior service is selected, we hand-wash screens and wipe interior windows with lint-free microfiber.' }
     ],
     pricingBasis: '$150 base rate (covers up to 10 windows), then $8 per additional window.',
     basePrice: 150
   },
   {
     id: 'pressure',
-    title: 'High-Performance Pressure Washing',
-    shortDesc: 'Deep blasting concrete walkways, roof structures, parkades, and facades.',
-    description: 'Revitalize your building exterior, walking paths, and vehicle zones with professional commercial-grade pressure washing and soft-washing. We remove decades of built-up oil, grease, tire marks, mold, moss, and atmospheric smog. Our dual-method system uses hot high-pressure water for durable surfaces and delicate soft-washing for shingles, wood, and stucco.',
+    title: 'Pressure Washing Kingston',
+    shortDesc: 'Deep blasting driveways, concrete paths, walkways, patios, and masonry.',
+    description: 'Breathe new life into your property surfaces with our professional pressure washing in Kingston, Ontario. We restore concrete driveways, brick patios, stone walkways, and exterior masonry to like-new condition. Our commercial-grade hot water systems blast through decades of grease, moss, mold, weeds, tire marks, and heavy organic staining. For softer surfaces, we offer damage-free soft-wash detergent options that protect your siding and timber structures.',
     image: pressureWashingSpinner,
     icon: 'Waves',
     highlights: [
-      'Commercial concrete surface spinners for fast, streak-free path restoration',
-      'Safe soft-wash chemical treatments for delicate roofs and painted siding',
-      'Deep stain extraction of parkades (oil, rust, carbon build-ups)',
-      'Improves safety by removing slippery moss, algae, and wet leaf grime'
+      'Commercial concrete surface spinners prevent messy striping or zebra lines',
+      'Safe pressure adjustments tailored to concrete, aggregate, brick, or pavers',
+      'Deep oil, rust, and stubborn chemical pre-treatment stain extraction',
+      'Eliminates slippery algae, moss, and wet grime to ensure public walking safety'
     ],
     features: [
-      { title: 'Surface Spinners', desc: 'Round walk-behind rotary cleaner heads ensure 100% consistent pressure without lines.' },
-      { title: 'Soft-Wash Solutions', desc: 'Low-pressure detergent wash kills algae spores down to the root on roofs and facades.' },
+      { title: 'Surface Spinners', desc: 'Round walk-behind rotary cleaner heads ensure 100% consistent pressure with no streak lines.' },
+      { title: 'Soft-Wash Solutions', desc: 'Low-pressure chemical treatment kills organic spores down to the root on soft surfaces.' },
       { title: 'Oil & Rust Pre-treatment', desc: 'Industrial degreasers break up stubborn engine fluids and metal stains before washing.' }
     ],
     process: [
-      { step: 1, title: 'Surface Pre-treatment', desc: 'Apply specialized biodegradable cleaning detergents to dissolve grease and moss spores.' },
-      { step: 2, title: 'Pressure Restoration', desc: 'Utilize specialized surface cleaners at 3500 PSI for walkways and building facades.' },
-      { step: 3, title: 'Rinsing & Directing', desc: 'Rinse all walls and walkways, pushing dirt directly to drainage channels.' },
-      { step: 4, title: 'Post-Treatment Seal', desc: 'Apply a mold-inhibitor spray to guarantee surfaces remain sparkling clean for longer.' }
+      { step: 1, title: 'Surface Pre-treatment', desc: 'We apply biodegradable cleaners to dissolve underlying oil, grease, and algae spores.' },
+      { step: 2, title: 'Pressure Restoration', desc: 'Our team utilizes specialized surface spinners at up to 3500 PSI for patios and driveways.' },
+      { step: 3, title: 'Rinsing & Flushing', desc: 'We rinse all walls and adjacent walkways, directing all debris to drainage channels.' },
+      { step: 4, title: 'Algae-Shield Post-Spray', desc: 'We apply a mild mold-inhibitor spray to keep your concrete looking brighter and cleaner for longer.' }
     ],
     pricingBasis: '$200 base rate (covers up to 800 sq ft), then $0.25 per additional sq ft.',
     basePrice: 200
   },
   {
+    id: 'gutter',
+    title: 'Gutter Cleaning Kingston',
+    shortDesc: 'Heavy-duty ground-based suction vacuuming and expert hand clearing for flawless water flow.',
+    description: 'Protect your building foundation and eaves from devastating water overflow. Our premier gutter cleaning in Kingston, Ontario features robust industrial-grade wet/dry vacuum systems that clear mud, sludge, and pine needles safely from the ground. Combined with manual debris extraction for heavily packed sections and full downspout flushing, we ensure your rainwater drainage operates perfectly all year round.',
+    image: gutterVacuumDetail,
+    icon: 'Grid',
+    highlights: [
+      'High-power gutter vacuum extracts packed wet sludge and pine needles',
+      'Manual debris extraction for dry leaf clumps, branches, and heavy twigs',
+      'Downspout pressure flush testing to ensure 100% open water escape routes',
+      'Before-and-after photo inspection reports provided to clients for transparency'
+    ],
+    features: [
+      { title: 'Industrial Gutter Vacuum', desc: 'High-lift suction extracts heavy mud and organic sludge that hand-scooping leaves behind.' },
+      { title: 'Water-Jet Downspout Flush', desc: 'If downspouts are clogged, we water-jet them from top to bottom to guarantee flow.' },
+      { title: 'Full Bracket Inspection', desc: 'We verify gutter spikes, hangers, slope, and seal seams for leaks or sagging spots.' }
+    ],
+    process: [
+      { step: 1, title: 'Debris Extraction', desc: 'We remove heavy leaves, branches, and mud using custom pole-vacuums or manual scoops.' },
+      { step: 2, title: 'Downspout Clearing', desc: 'We feed hoses down all downspouts and wash down any hidden clogs or nests.' },
+      { step: 3, title: 'Flush Wash', desc: 'Our technicians run water through the gutter channels to verify perfect slope and flow.' },
+      { step: 4, title: 'Debris Disposal', desc: 'We package and haul away all organic debris, leaving your yard perfectly clean.' }
+    ],
+    pricingBasis: '$150 base rate (covers up to 100 linear feet), then $1.50 per additional linear foot.',
+    basePrice: 150
+  },
+  {
     id: 'dryer',
-    title: 'Interior & Exterior Dryer Vent Cleaning',
-    shortDesc: 'Complete lint removal and airway optimization for home safety and energy efficiency.',
-    description: 'Dryer vents are one of the top causes of residential building fires due to highly combustible lint build-up. Our specialized dryer vent care accesses the full duct system from both the interior appliance connection and the exterior roof or wall exhaust port. We pull out solid lint packings, inspect vents for blocks, and improve dryer drying times by up to 50%.',
+    title: 'Dryer Vent Cleaning Kingston',
+    shortDesc: 'Full internal airway lint removal and back-pressure velocity testing.',
+    description: 'Did you know that lint accumulation in dryer vents is a leading cause of residential house fires in Eastern Ontario? Our professional dryer vent cleaning in Kingston, Ontario completely eliminates this risk while cutting your laundry drying times in half. We utilize rotating flex-brush whip lines to clean duct runs up to 40 feet long, extracting combustible lint from the appliance connection all the way to the exterior exhaust terminal.',
     image: dryerVentCleaning,
     icon: 'Wind',
     highlights: [
@@ -87,31 +116,58 @@ export const SERVICES_DATA: CleaningService[] = [
     basePrice: 120
   },
   {
-    id: 'gutter',
-    title: 'Gutter Vacuuming & Hand Clearing',
-    shortDesc: 'Heavy-duty suction vacuuming and hand clearing for flawless water flow.',
-    description: 'Clogged gutters lead to water overflow, wood rot, roof leaks, and compromised concrete foundations. We clear and clean gutters thoroughly using industrial gutter vacuums from the safety of the ground, paired with expert hand-clearing and downspout washing where required. Ensure rain flows perfectly away from your building walls.',
-    image: gutterVacuumDetail,
-    icon: 'Grid',
+    id: 'house-wash',
+    title: 'House Washing Kingston',
+    shortDesc: 'Low-pressure soft-wash siding restoration to eliminate vinyl mold, mildew, and black streak stains.',
+    description: 'High-pressure washing can crack vinyl siding, strip paint, and compromise structural siding seals. That is why our premium house washing in Kingston, Ontario utilizes specialized low-pressure soft-washing. We apply custom-formulated, 100% biodegradable cleaning solutions that actively kill mold, mildew, lichen, and algae spores down to the root, rather than just blasting the surface. This keeps your home exterior looking sparkling clean and beautiful for significantly longer.',
+    image: houseWashingFacade,
+    icon: 'Home',
     highlights: [
-      'High-power gutter vacuum sucks up sludge, water, mud, and pine needles easily',
-      'Manual debris extraction for packed, dry leaf clumps and heavy twigs',
-      'Downspout pressure flush testing to ensure 100% open water escape routes',
-      'Before-and-after photo inspection reports provided to clients'
+      'Gentle low-pressure soft-washing protects siding, wood, stucco, and brickwork',
+      'Eco-friendly biodegradable sanitizers kill organic spores at the cellular level',
+      'Completely removes unsightly dark mold stains, bird waste, and cobwebs',
+      'Instantly boosts residential curb appeal and resale value before listing'
     ],
     features: [
-      { title: 'Industrial Gutter Vacuum', desc: 'High-lift suction extracts heavy mud and organic sludge that hand-scooping leaves behind.' },
-      { title: 'Water-Jet Downspout Flush', desc: 'If downspouts are clogged, we water-jet them from top to bottom to guarantee flow.' },
-      { title: 'Full Bracket Inspection', desc: 'We verify gutter spikes, hangers, slope, and seal seams for leaks or sagging spots.' }
+      { title: 'Siding Sanitizers', desc: 'Custom soaps actively digest organic growth, grime, and green algae build-up.' },
+      { title: 'Damage-Free Delivery', desc: 'Delivered at garden-hose pressure, completely eliminating water ingress or siding damage.' },
+      { title: 'Eco-Friendly Safeguards', desc: 'We pre-soak all surrounding gardens and plants to guarantee zero chemical stress.' }
     ],
     process: [
-      { step: 1, title: 'Debris Extraction', desc: 'Remove heavy leaves, branches, and mud using custom pole-vacuums or manual scoops.' },
-      { step: 2, title: 'Downspout Clearing', desc: 'Feed hoses down all downspouts and wash down any hidden clogs or nests.' },
-      { step: 3, title: 'Flush Wash', desc: 'Run water through the gutter channels to verify perfect slope, flowing direct to sewers.' },
-      { step: 4, title: 'Debris Disposal', desc: 'Package and haul away all organic debris, leaving your yard perfectly clean.' }
+      { step: 1, title: 'Plant Pre-Wet', desc: 'We soak adjacent turf and garden beds with fresh water to shield root systems.' },
+      { step: 2, title: 'Soap Application', desc: 'We spray our proprietary soft-wash blend from ground level up to 3 stories high.' },
+      { step: 3, title: 'Dwell & Action', desc: 'We let the solution sit for 10-15 minutes, dissolving stubborn stains and organic roots.' },
+      { step: 4, title: 'Pristine Rinse', desc: 'We perform a thorough, low-pressure clean rinse, washing away all dirt, debris, and soap residues.' }
     ],
-    pricingBasis: '$150 base rate (covers up to 100 linear feet), then $1.50 per additional linear foot.',
-    basePrice: 150
+    pricingBasis: '$250 base rate (covers up to 1500 sq ft), then $0.15 per additional sq ft.',
+    basePrice: 250
+  },
+  {
+    id: 'commercial',
+    title: 'Commercial Exterior Cleaning Kingston',
+    shortDesc: 'Multi-unit residential, retail storefronts, corporate facades, and industrial facility exterior maintenance.',
+    description: 'A spotless exterior is crucial for welcoming customers and preserving property equity. Dust B Gone provides professional commercial exterior cleaning in Kingston and surrounding Eastern Ontario areas. We clean multi-story office facades, public walkways, retail storefront glass, multi-unit townhomes, parking curbs, and commercial spaces. Our fully trained, safety-certified crew uses top-tier water-fed pure water poles, high-reach safety rigging, and hot water surface spinners designed for fast, streak-free restoration.',
+    image: commercialHotWash,
+    icon: 'Building',
+    highlights: [
+      'Customized property service schedules designed around business hours',
+      'Fully safety-certified technicians and $2M liability insurance',
+      'Pristine retail window washing, facade cleaning, and walkway pressure washing',
+      'Full post-project compliance reports and detailed photo audits for property managers'
+    ],
+    features: [
+      { title: 'Business Hour Flex', desc: 'We clean early mornings, late nights, or weekends to minimize client disruption.' },
+      { title: 'Safety Compliance', desc: 'Technicians are trained in fall arrest, ladder safety, and operate under strict guidelines.' },
+      { title: 'Surface Restoration', desc: 'Hot-water pressure blasting for high-traffic paths to extract gum, oil, and grease.' }
+    ],
+    process: [
+      { step: 1, title: 'Site Inspection & Safety', desc: 'We perform a detailed site risk assessment, establish pedestrian safety barriers, and map water inlets.' },
+      { step: 2, title: 'Deep Grime Pre-Treatment', desc: 'We pre-treat high-traffic walkways with oil-eating enzymes and organic sanitizers.' },
+      { step: 3, title: 'High-Reach Exterior Agitation', desc: 'We scrub storefront windows and wash upper facades up to 4 stories high safely.' },
+      { step: 4, title: 'Pristine Rinse & Polish', desc: 'We complete a final pure water rinse of all glass and pressure rinse paths to clear all residues.' }
+    ],
+    pricingBasis: '$350 base rate (covers up to 2000 sq ft), then $0.20 per additional sq ft.',
+    basePrice: 350
   }
 ];
 

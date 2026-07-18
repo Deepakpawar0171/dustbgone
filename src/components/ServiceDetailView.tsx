@@ -4,7 +4,7 @@ import { CleaningService, ServiceId } from '../types';
 import { 
   Droplets, Waves, Wind, Layers, CheckCircle, ArrowRight, 
   ShieldAlert, Award, ShieldCheck, Zap, Flame, Clock, 
-  Compass, Eye, Heart, BarChart3, HelpCircle 
+  Compass, Eye, Heart, BarChart3, HelpCircle, Home, Building 
 } from 'lucide-react';
 
 // Import all 16 newly generated hyper-realistic assets
@@ -29,6 +29,11 @@ import gutter3 from '../assets/images/gutter_3_flushing_1784337560248.jpg';
 import gutter4 from '../assets/images/gutter_4_camera_1784337569371.jpg';
 
 import logoImg from '../assets/images/dustbgone_logo_1784318749298.jpg';
+
+import pressureWashSiding from '../assets/images/pressure_washing_1784317913191.jpg';
+import homeExterior from '../assets/images/hero_clean_home_1784317890657.jpg';
+import pressureSpinnerV1 from '../assets/images/pressure_1_spinner_1784337451075.jpg';
+import windowPoleV1 from '../assets/images/window_1_logo_pole_1784337410036.jpg';
 
 interface ServiceDetailViewProps {
   service: CleaningService;
@@ -143,6 +148,58 @@ const GALLERY_DATA: Record<ServiceId, { src: string; title: string; desc: string
       title: "Pole-Mounted Inspection Camera Audit",
       desc: "Inspecting the gutter channel interior with high-resolution pole cameras to verify absolute clearing and perfect visual cleanliness."
     }
+  ],
+  'house-wash': [
+    {
+      src: pressureWashSiding,
+      tag: "Soft-Wash Siding",
+      title: "Vinyl Siding Chemical Application",
+      desc: "Our field technician applies eco-friendly, biodegradable soft-wash solutions to vinyl siding under low pressure, lifting gray carbon film and black mold stains."
+    },
+    {
+      src: pressure2,
+      tag: "Facade Clean",
+      title: "Multi-Story High-Reach Siding Care",
+      desc: "Low-pressure siding detergents actively break down organic growth, mold, and algae down to the root without damaging painted siding or joints."
+    },
+    {
+      src: pressure3,
+      tag: "Wood Siding",
+      title: "Gentle Timber Soft-Wash Treatment",
+      desc: "Removing green mold and gray atmospheric dust from natural cedar shingles and deck walls safely to restore their original warm woody hues."
+    },
+    {
+      src: homeExterior,
+      tag: "Finished Property",
+      title: "Pristine Completed Home Exterior",
+      desc: "A beautifully restored suburban home featuring completely clean siding, bright gutters, and sparkling windows after our soft-wash treatment."
+    }
+  ],
+  'commercial': [
+    {
+      src: pressure4,
+      tag: "Curb Hot Wash",
+      title: "High-Temperature Hot Water Sidewalk Care",
+      desc: "Our commercial grade hot-water surface spinner cuts through decades of tire grease, exhaust soot, and chewing gum on parking curbs and sidewalks."
+    },
+    {
+      src: pressureSpinnerV1,
+      tag: "Rotary Spinner",
+      title: "Concrete Walkway Surface Cleansing",
+      desc: "A commercial technician uses walk-behind rotary pressure heads to restore public sidewalks, paths, and entryways to pristine condition."
+    },
+    {
+      src: windowPoleV1,
+      tag: "Storefront Poles",
+      title: "High Storefront Pure Water Care",
+      desc: "Using lightweight carbon-fiber water-fed poles to scrub and rinse high corporate facade windows and commercial storefront glass."
+    },
+    {
+      src: window4,
+      tag: "Facade Railing",
+      title: "Commercial Glass Balustrade Detailing",
+      desc: "Wiping and polishing glass railings, storefront partitions, and main entryway glass to remove fingerprints, smog film, and rain marks."
+    }
   ]
 };
 
@@ -235,6 +292,50 @@ const BENEFITS_DATA: Record<ServiceId, { title: string; desc: string; icon: Reac
       desc: "Removing damp, rotting organic material destroys the perfect damp habitat for breeding mosquitoes, insects, birds, and mice.",
       icon: <Heart className="h-5 w-5 text-emerald-500" />
     }
+  ],
+  'house-wash': [
+    {
+      title: "Gentle Damage-Free Siding Clean",
+      desc: "Our low-pressure soft-wash completely avoids structural water intrusion or cracked siding panels that high-pressure blast guns often cause.",
+      icon: <ShieldCheck className="h-5 w-5 text-amber-500" />
+    },
+    {
+      title: "Long-Lasting Mold Inhibitor",
+      desc: "By killing algae spores and mold at the cellular level, your home siding stays cleaner and brighter up to three times longer than pressure washing.",
+      icon: <Zap className="h-5 w-5 text-amber-500" />
+    },
+    {
+      title: "Preserve Property Curb Value",
+      desc: "Eliminates embarrassing black streaks, spider webs, and insect cocoons instantly, boosting your residential home resale value by up to 5%.",
+      icon: <Heart className="h-5 w-5 text-amber-500" />
+    },
+    {
+      title: "Safe for Gardens and Plants",
+      desc: "Our pre-wetting protocols and organic, biodegradable detergents mean zero stress or chemical damage to your lawns, plants, and pet zones.",
+      icon: <Compass className="h-5 w-5 text-amber-500" />
+    }
+  ],
+  'commercial': [
+    {
+      title: "Safety Certified & $2M Insured",
+      desc: "Rest easy knowing our crews operate under strict safety parameters, with full elevation safety rigging and comprehensive liability insurance.",
+      icon: <ShieldCheck className="h-5 w-5 text-purple-500" />
+    },
+    {
+      title: "Off-Hour Operations Flexibility",
+      desc: "We perform deep exterior facade washes early morning, late night, or weekends to prevent disturbing your tenants, employees, or retail foot traffic.",
+      icon: <Clock className="h-5 w-5 text-purple-500" />
+    },
+    {
+      title: "Commercial Property Preservation",
+      desc: "Deep steam-cleaning curb and sidewalk paths removes slippery moss and chewing gum, reducing liability risks for public walking paths.",
+      icon: <Award className="h-5 w-5 text-purple-500" />
+    },
+    {
+      title: "Spotless Windows & Clean Facades",
+      desc: "Storefront windows, cladding, facades, and awnings washed in one comprehensive visit, displaying premium corporate standards to clients.",
+      icon: <Compass className="h-5 w-5 text-purple-500" />
+    }
   ]
 };
 
@@ -259,6 +360,10 @@ export default function ServiceDetailView({
         return <Wind className={`${className} text-indigo-500`} />;
       case 'gutter':
         return <Layers className={`${className} text-emerald-500`} />;
+      case 'house-wash':
+        return <Home className={`${className} text-amber-500`} />;
+      case 'commercial':
+        return <Building className={`${className} text-purple-500`} />;
     }
   };
 

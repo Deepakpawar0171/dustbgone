@@ -27,7 +27,7 @@ export default function HomeView({
   const stats = [
     { label: '5-Star Local Reviews', val: '4.9/5' },
     { label: 'Commercial Liability', val: '$2 Million' },
-    { label: 'Satisfied Properties', val: '1,500+' },
+    { label: 'Satisfied Properties', val: '200+' },
     { label: 'Guaranteed Callback', val: '24 Hours' }
   ];
 
@@ -61,6 +61,8 @@ export default function HomeView({
       case 'pressure': return 'Deep Concrete & Facades';
       case 'dryer': return 'Air Duct Dryer Vents';
       case 'gutter': return 'Gutter Vacuum & Hands';
+      case 'house-wash': return 'Siding Soft-Wash';
+      case 'commercial': return 'Commercial Facades';
     }
   };
 

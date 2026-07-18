@@ -1,4 +1,4 @@
-export type ServiceId = 'window' | 'pressure' | 'dryer' | 'gutter';
+export type ServiceId = 'window' | 'pressure' | 'dryer' | 'gutter' | 'house-wash' | 'commercial';
 
 export interface CleaningService {
   id: ServiceId;
@@ -26,6 +26,8 @@ export interface QuoteDetails {
   pressureAreaSqFt: number;
   dryerVentCount: number;
   gutterLengthFt: number;
+  houseWashSqFt: number;
+  commercialAreaSqFt: number;
   
   // Add-ons
   ecoFriendlySoap: boolean;

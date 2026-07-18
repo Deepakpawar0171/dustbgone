@@ -13,7 +13,9 @@ export default function Navbar({ currentTab, setCurrentTab, onOpenBooking }: Nav
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'services', label: 'Our Services' },
+    { id: 'credentials', label: 'Credentials & About' },
+    { id: 'areas', label: 'Areas We Serve' },
+    { id: 'reviews', label: 'Client Reviews' },
     { id: 'calculator', label: 'Quote Calculator' },
     { id: 'booking-list', label: 'My Bookings' }
   ];
@@ -52,7 +54,7 @@ export default function Navbar({ currentTab, setCurrentTab, onOpenBooking }: Nav
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           {navItems.map((item) => {
-            const isActive = currentTab === item.id || (item.id === 'services' && ['window', 'pressure', 'dryer', 'gutter'].includes(currentTab));
+            const isActive = currentTab === item.id || (item.id === 'home' && ['window', 'pressure', 'dryer', 'gutter', 'house-wash', 'commercial'].includes(currentTab));
             return (
               <button
                 key={item.id}
@@ -124,7 +126,7 @@ export default function Navbar({ currentTab, setCurrentTab, onOpenBooking }: Nav
         <div className="border-t border-slate-100 bg-white px-4 py-3 md:hidden space-y-2 animate-in fade-in slide-in-from-top-5 duration-200">
           <div className="space-y-1">
             {navItems.map((item) => {
-              const isActive = currentTab === item.id || (item.id === 'services' && ['window', 'pressure', 'dryer', 'gutter'].includes(currentTab));
+              const isActive = currentTab === item.id || (item.id === 'home' && ['window', 'pressure', 'dryer', 'gutter', 'house-wash', 'commercial'].includes(currentTab));
               return (
                 <button
                   key={item.id}
